@@ -6,15 +6,15 @@ To rigorously verify file integrity by creating and evaluating SHA-256 hash valu
 
 <h2>Procedure</h2>
 
-1. File Content Display:
+**File Content Display:**
 
 The contents of two files, file1.txt and file2.txt, were displayed using the cat command. This initial visual inspection suggested that the files were identical.
 
 
-<img src="https://i.imgur.com/1TURcMG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uzsJue6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
    
 
-2. SHA-256 Hash Generation:
+**SHA-256 Hash Generation:**
 
 The SHA-256sum command, a standard Linux utility, was employed to generate unique cryptographic hash values for each file. SHA-256 was chosen for its strong collision resistance, meaning it is highly improbable that two different files will produce the same hash.
 
@@ -39,6 +39,8 @@ sha256sum file2.txt > file2hash.txt
 The cmp command, a byte-by-byte file comparison utility, was used to identify any differences between the stored hash values in file1hash.txt and file2hash.txt.
 
 The cmp command outputted the first differing byte position, confirming that the SHA-256 hashes, and therefore the original files, were indeed different.
+
+<img src="https://i.imgur.com/mN9vIzP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h2>Findings:</h2>
 
